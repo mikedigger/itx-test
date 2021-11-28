@@ -1,0 +1,97 @@
+.partners {
+	background: #F8F8F8;
+	
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		@include screen('desktop') {
+			justify-content: space-between;
+			flex-direction: row;
+			gap: 20px;
+		}
+	}
+
+	&__feedback,
+	&__companies {
+		flex-basis: 50%;
+	}
+
+	&__feedback {
+		display: flex;
+		position: relative;
+		min-height: 240px;
+	}
+
+	&__employee {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		visibility: hidden;
+		&.is--active {
+			visibility: visible;
+		}
+	}
+
+	&__item {
+		padding: custom-clamp(10px, 30px);
+		border: 1px solid #dedede;
+		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+		overflow-y: auto;
+	}
+
+	&__person {
+		display: flex;
+		align-items: center;
+		gap: custom-clamp(10px, 15px);
+		text-transform: capitalize;
+		margin-bottom: custom-clamp(20px, 30px);
+	} 
+
+	&__name {
+		font-weight: $fw-3x;
+		font-size: custom-clamp($fz-2x, $fz-3x);
+	}
+
+	&__position {
+		color: #575757;
+		font-size: custom-clamp($fz-x, $fz-2x);
+	}
+
+	&__text {
+		line-height: 137%;
+		font-size: custom-clamp($fz-x, $fz-2x);
+		&::before {
+			content: open-quote;
+		}
+		&::after {
+			content: close-quote;
+		}
+	}
+
+	&__companies {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(custom-clamp(160px, 250px), 1fr));
+		grid-auto-rows: minmax(171px, 1fr);
+		gap: custom-clamp(15px, 20px);
+	}
+
+	&__company {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	}
+
+	&__logo {
+		width: custom-clamp(44px, 70px);
+		height: custom-clamp(44px, 70px);
+		border-radius: 50%;
+		& > img {
+			object-fit: cover;
+		}
+	}
+}

@@ -1,0 +1,192 @@
+
+- const img_path = '../img/';
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no")
+		meta(name="format-detection", content="telephone=no")
+		title ITEX TEST
+
+	body
+		header.header
+			.container.header__inner
+				a.header__logo.img(href="#") 
+					img(src=`${img_path}logo.png`, alt="logo")
+				nav.header__nav
+					ul.header__list
+						li
+							a.link(href="#") home
+						li
+							a.link(href="#") our partners
+						li
+							a.link(href="#") our team
+						li
+							a.link.is--active(href="#") contact us
+				button(type="button").header__hamburger.hamburger--slider
+					span.hamburger-box
+						span.hamburger-inner
+		main
+			section.hero
+				.container.hero__inner
+					.hero__box
+						div
+							h1.h1.hero__title Email marceting for fast-growing <br/> startups
+							p.hero__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id ut cursus dictum purus enim in in urna, suspendisse. Mauris, mollis sed sed ac.
+						.hero__btns
+							button.button.button--light start now
+							button.button.button--outlined read more
+				.hero__decor.hero__decor--circle
+					i.icon-circle
+				.hero__decor.hero__decor--cross
+					i.icon-cross
+				.hero__decor.hero__decor--ring
+			
+			section.section.how
+				.container
+					.how__inner
+						.how__info
+							h2.h2.section__title How it works?
+							.how__text
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.
+								p Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.
+							a(href="#").more.how__more Read more
+						.how__img.img
+							img(src=`${img_path}illustration-2.png`, alt="working process")
+
+			section.section.create
+				.container
+					h2.h2.section__title We created world
+					ul.create__list
+						li.create__item
+							.create__icon
+								i.icon-mech
+							.create__info
+								h3.h3.create__title Development
+								p.create__text Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.
+								.more.create__more Read more
+						li.create__item
+							.create__icon
+								i.icon-light
+							.create__info
+								h3.h3.create__title Development
+								p.create__text Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.
+								.more.create__more Read more
+						li.create__item
+							.create__icon
+								i.icon-pugman
+							.create__info
+								h3.h3.create__title Development
+								p.create__text Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.
+								.more.create__more Read more
+						li.create__item
+							.create__icon
+								i.icon-devices
+							.create__info
+								h3.h3.create__title Development
+								p.create__text Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.
+								.more.create__more Read more
+						li.create__item
+							.create__icon
+								i.icon-mech
+							.create__info
+								h3.h3.create__title Development
+								p.create__text Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.
+								.more.create__more Read more
+						li.create__item
+							.create__icon
+								i.icon-light
+							.create__info
+								h3.h3.create__title Development
+								p.create__text Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.
+								.more.create__more Read more
+						li.create__item
+							.create__icon
+								i.icon-pugman
+							.create__info
+								h3.h3.create__title Development
+								p.create__text Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.
+								.more.create__more Read more
+						li.create__item
+							.create__icon
+								i.icon-devices
+							.create__info
+								h3.h3.create__title Development
+								p.create__text Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.
+								.more.create__more Read more
+					.more.more--noarrow.create__more-mobile show more
+			footer.section.footer
+				.container.footer__container
+					h2.h2.section__title.footer__title where you can find us?
+					.footer__inner
+						.footer__col
+							h3.h3.footer__heading office 1
+							ul.footer__contacts
+								li
+									i.icon-location.footer__icon
+									adress.footer__link Lasnamae linnaosa, Pae tn 25-47
+								li
+									i.icon-mail.footer__icon
+									a.footer__link(href="mailto:username@mail.com") username@mail.com
+								li
+									i.icon-phone.footer__icon
+									a.footer__link(href="tel:+3125789075") +3125789075
+						.footer__col
+							h3.h3.footer__heading office 2
+							ul.footer__contacts
+								li
+									i.icon-location.footer__icon
+									adress.footer__link Lasnamae linnaosa, Pae tn 25-47
+								li
+									i.icon-mail.footer__icon
+									a.footer__link(href="mailto:username@mail.com") username@mail.com
+								li
+									i.icon-phone.footer__icon
+									a.footer__link(href="tel:+3125789075") +3125789075							
+							
+						.footer__col
+							h3.h3.footer__heading socials
+							.socials
+								ul.socials__list.footer__socials
+									li
+										a.socials__link(href="#")
+											i.icon-fb.footer__socials-icon
+									li
+										a.socials__link(href="#")
+											i.icon-tw.footer__socials-icon
+									li
+										a.socials__link(href="#")
+											i.icon-in.footer__socials-icon
+									li
+										a.socials__link(href="#")
+											i.icon-ins.footer__socials-icon
+							a.privacy.footer__privacy(href="#") privacy policy
+
+		.popup.popup--mobile
+			nav
+				ul.popup__list
+					li
+						a(href="#").link home
+					li
+						a(href="#").link our partners
+					li
+						a(href="#").link our team
+					li
+						a(href="#").link.is--active contact us
+			div.popup__footer
+				div
+					ul.popup__soclist
+						li
+							a(href="#")
+								i.icon-fb.popup__icon
+						li
+							a(href="#")
+								i.icon-tw.popup__icon
+						li
+							a(href="#")
+								i.icon-in.popup__icon
+						li
+							a(href="#")
+								i.icon-ins.popup__icon
+				a.privacy.popup__privacy(href="#") privacy policy

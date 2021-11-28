@@ -1,0 +1,78 @@
+.hero {
+	z-index: 0;
+	height: 100vh;
+	color: $base-color-light;
+	background: #17191d;
+	position: relative;
+	overflow: hidden;
+	min-height: 768px;
+
+	&__inner {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		padding: 0 20px;
+	}
+
+	&__box {
+		max-width: 1268px;
+		padding: custom-clamp(56px, 72px) custom-clamp(35px, 46px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		gap: custom-clamp(40px, 114px);
+
+		background: linear-gradient(104.93deg, rgba(122, 122, 122, 0.19) 1.86%, rgba(122, 122, 122, 0) 104.73%);
+		filter: drop-shadow(0px 4px 4px rgba(50, 50, 50, 0.15));
+		backdrop-filter: blur(100px);
+	}
+
+	&__text {
+		max-width: 742px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		margin-bottom: custom-clamp(30px, 40px);
+	}
+
+	&__btns {
+		display: flex;
+		flex-direction: column;
+		gap: custom-clamp(30px, 60px);
+		@include screen('tablet') {
+			flex-direction: row;
+		}
+	}
+
+	&__decor {
+		position: absolute;
+		color: $accent-color;
+
+		&--cross {
+			right: 17px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: custom-clamp(69px, 266px);
+		}
+
+		&--circle {
+			top: custom-clamp(135px, 52px);
+			left: custom-clamp(82px, 411px);
+			font-size: custom-clamp(79px, 256px);
+		}
+
+		&--ring {
+			width: custom-clamp(315px, 1021px);
+			height: custom-clamp(106px, 292px);
+			background: url(#{$img-path}ring.png) no-repeat bottom / contain;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+		}
+	}
+}

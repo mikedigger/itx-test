@@ -1,0 +1,18 @@
+h1.h1,
+h2.h2,
+h3.h3 {
+	font-weight: $fw-max;
+}
+
+h1.h1 {
+	font-size: custom-clamp($fz-5x, $fz-7x);
+	line-height: 1.15;
+}
+
+h2.h2 {
+	font-size: custom-clamp($fz-3x, $fz-6x);
+}
+
+h3.h3 {
+	font-size: custom-clamp($fz-2x, $fz-5x);
+}

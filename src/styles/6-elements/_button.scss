@@ -1,0 +1,40 @@
+.button {
+	transition: $base-animation-speed;
+	padding: 0 10px;
+	min-width: 284px;
+	height: 64px;
+	border-radius: 36px;
+
+	font-weight: $fw-2x;
+	font-size: custom-clamp($fz-2x, $fz-3x);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: $base-color-light;
+	text-transform: capitalize;
+	border: 1px solid transparent;
+
+	&--light{
+		background: $accent-color;
+		&:hover {
+			border-color: $base-color-light;
+			background: none;
+		}
+	}
+	&--outlined {
+		border-color: $base-color-light;
+		&:hover {
+			background: $accent-color;
+		}
+	}
+	&--dark {
+		background: $base-color-dark;
+		&:hover {
+			background: transparent;
+			color: $base-color-dark;
+			border-color: $base-color-dark;
+		}
+	}
+}

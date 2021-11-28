@@ -1,0 +1,42 @@
+$safe-sans-serif: Arial, Verdana, Helvetica, sans-serif;
+$safe-serif: 'Times New Roman', Georgia, Garamond, serif;
+
+$base-animation-speed: 0.3s;
+
+$base-container-width: 1780px;
+$page-min-width: 375px;
+$page-max-width: 1919.98px;
+$breakpoint-mobile: 479.98px;
+$breakpoint-tablet: 767.98px;
+$breakpoint-desktop: 1023.98px;
+
+$base-border-radius: 5px;
+$img-path: '../img/';
+
+// colors
+$accent-color: #FF0B53;
+$base-color-dark: #101020;
+$base-text-color: #3D3D3D;
+$base-color-light: #fff;
+
+$hamburger-layer-color: $base-color-light;
+$hamburger-active-layer-color: $hamburger-layer-color;
+
+// fonts
+$base-font-family: 'Ubuntu', $safe-sans-serif;
+
+$fz-x: 16px;
+$fz-1x: 18px;
+$fz-2x: 20px;
+$fz-3x: 24px;
+$fz-4x: 30px;
+$fz-5x: 34px;
+$fz-6x: 54px;
+$fz-7x: 72px;
+
+$fw-base: 300;
+$fw-2x: 400;
+$fw-3x: 500;
+$fw-max: 700;
+
+

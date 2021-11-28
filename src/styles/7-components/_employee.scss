@@ -1,0 +1,103 @@
+.employee {
+	max-width: 724px;
+	padding: 20px;
+	background: $base-color-light;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	font-size: custom-clamp($fz-x, $fz-2x);
+	position: relative;
+
+	&__close {
+		transition: $base-animation-speed;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: #f8f8f8;
+		border: 1px solid #dedede;
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-bottom: 20px;
+		@include screen('tablet'){
+			flex-direction: row;
+		};
+	}
+
+	&__photo {
+		max-width: 102px;
+		max-height: 90px;
+		border: 1px solid #9a9a9a;
+		border-radius: 5px;
+		height: 100%;
+		flex-grow: 1;
+		@include screen('mobile'){
+			max-width: 271px;
+			max-height: 239px;		
+		};
+	}
+
+	&__data {
+		flex-grow: 1;
+		gap: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__data-col {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	&__datarow {
+		display: flex;
+		gap: 10px;
+		text-transform: capitalize;
+	}
+
+	&__key {
+		max-width: 110px;
+		width: 100%;
+	}
+	&__value {
+		background: #f4f4f4;
+		border-radius: 7px;
+		padding: 3px 10px;
+	}
+
+	&__socials {
+		display: flex;
+		gap: 18px;
+		color: $accent-color;
+		font-size: custom-clamp(18px, 25px);
+		background: #f4f4f4;
+		border-radius: 7px;
+		width: fit-content;
+		padding: 9px 13px;
+	}
+
+	&__social {
+		transition: $base-animation-speed;
+		display: flex;
+		gap: 18px;
+		color: $accent-color;
+		&:hover {
+			color: $base-color-dark;
+		}
+	}
+}

@@ -1,0 +1,90 @@
+.create {
+	background: #f8f8f8;
+	position: relative;
+
+	&::after {
+		content: '\e903';
+		font-family: Icon;
+		position: absolute;
+		top: custom-clamp(20px, 80px, 1024px);
+		right: 160px;
+		color: $accent-color;
+		font-size: custom-clamp(100px, 156px, 1024px);
+		transform: rotate(-20deg);
+		z-index: 0;
+		display: none;
+		@include screen('tablet'){
+			display: block;
+		};
+	}
+
+	&__list {
+		margin-bottom: 20px;
+		z-index: 1;
+		position: relative;
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 1fr;
+		@include screen('mobile') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include screen('desktop') {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media screen and (min-width: 1366px) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		&.show--all {
+			.create__item {
+				display: block !important;
+			}
+		}
+	}
+
+	&__item {
+		padding: custom-clamp(10px, 25px) custom-clamp(10px, 20px) custom-clamp(10px, 20px);
+		border: 1px solid #dedede;
+		border-radius: 7px;
+		background: $base-color-light;
+		display: none;
+
+		&:nth-child(-n+4) {
+			display: block;
+		}
+		@include screen('tablet'){
+			display: block;
+		};
+	}
+
+	&__icon {
+		margin-bottom: custom-clamp(18px, 35px);
+		font-size: custom-clamp(33px, 55px);
+		color: $accent-color;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: custom-clamp(15px, 20px);
+	}
+
+	&__text {
+		font-size: custom-clamp(14px, $fz-x);
+	}
+
+	&__more {
+		font-size: custom-clamp($fz-x, $fz-2x);
+		&::after {
+			font-size: 13px;
+		}
+
+		&-mobile {
+			justify-content: center;
+			text-transform: capitalize;
+			text-decoration: underline;
+			@include screen('tablet'){
+				display: none;
+			};
+		}
+	}
+}

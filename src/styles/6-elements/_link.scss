@@ -1,0 +1,11 @@
+.link {
+	padding-bottom: 3px;
+	color: $base-color-light;
+	text-transform: uppercase;
+	position: relative;
+	@extend %hover-line;
+
+	&.is--active::after {
+		width: 100%;
+	}
+}

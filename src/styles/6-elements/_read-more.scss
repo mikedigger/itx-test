@@ -1,0 +1,21 @@
+.more {
+	cursor: pointer;
+	transition: $base-animation-speed;
+	font-weight: $fw-2x;
+	color: $base-color-dark;
+	position: relative;
+	display: flex;
+	align-items: baseline;
+	gap: 18px;
+	&::after {
+		content: '\e900';
+		font-size: 16px;
+		font-family: Icon;
+	}
+	&:hover {
+		color: $accent-color;
+	}
+	&--noarrow:after {
+		display: none;
+	}
+}

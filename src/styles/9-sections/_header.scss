@@ -1,0 +1,47 @@
+.header {
+	z-index: 998;
+
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+
+	padding: 35px 0;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include screen('tablet') {
+			gap: 120px;
+		}
+	}
+
+	&__logo {
+		width: custom-clamp(65px, 124px);
+		max-height: 41px;
+		z-index: 1;
+	}
+
+	&__nav {
+		display: none;
+		@include screen('tablet') {
+			display: block;
+		}
+	}
+
+	&__list {
+		display: flex;
+		gap: 10px 30px;
+		flex-wrap: wrap;
+		font-weight: $fw-2x;
+	}
+
+	&__hamburger {
+		z-index: 1;
+		transform: scale(0.55);
+		@include screen('tablet') {
+			display: none;
+		}
+	}
+}
