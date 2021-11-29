@@ -12,11 +12,11 @@ module.exports = {
 			keyframes: true,
 			variables: true,
 			rejected: true,
-			safelist: [/^is-/, /active$/, /.map$/, /^[class]/, /show/]
+			safelist: [/^is-/, /active$/, /.map$/, /^[class]/, /show/, /team/]
 		}),
 		uncss({
 			html: ['./dist/*.html'],
-			ignore: [/^is-/, /active$/, /show/]
+			ignore: [/^is-/, /active$/, /show/, /team/]
 		}),
 		combineMediaQuery,
 		combineDuplicatedSelectors({
