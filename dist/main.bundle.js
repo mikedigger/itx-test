@@ -8516,24 +8516,32 @@ __webpack_require__.r(__webpack_exports__);
 (function empPopup() {
   const empClose = document.querySelector('.employee__close');
   const popupEmp = document.querySelector('.popup--employee');
+  const header = document.querySelector('.header');
   if (!empClose) return;
   empClose.addEventListener('click', e => {
-    e.target.closest('.popup--employee').classList.toggle('is--active'); // document.body.classList.remove('is-unscrollabble')
+    e.target.closest('.popup--employee').classList.toggle('is--active');
   });
   document.addEventListener('click', e => {
     if (e.target.closest('.team__button')) {
-      popupEmp.classList.add('is--active'); // document.body.classList.add('is-unscrollabble')
+      popupEmp.classList.add('is--active');
     }
 
     popupEmp.addEventListener('click', e => {
       if (!e.target.closest('.employee')) popupEmp.classList.remove('is--active');
     });
+
+    if (popupEmp.classList.contains('is--active')) {
+      header.style.zIndex = -1;
+    } else {
+      header.style.zIndex = 998;
+    }
   });
 })();
 
 (function showHide() {
   const createList = document.querySelector('.create__list');
   const create = document.querySelector('.create');
+  if (!create) return;
   create.addEventListener('click', e => {
     let showMore = e.target.closest('.create__more-mobile');
 
@@ -8562,7 +8570,7 @@ let popup = document.querySelector('.popup');
 hamburger.addEventListener('click', e => {
   e.currentTarget.classList.toggle('is-active');
   popup.classList.toggle('is--active');
-  document.body.classList.toggle('is-unscrollabble');
+  document.body.classList.toggle('is-fixed');
 });
 
 /***/ }),
@@ -8661,7 +8669,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1638173692579
+      // 1638266660646
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -8681,7 +8689,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1638173692585
+      // 1638266660652
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -8701,7 +8709,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1638173693061
+      // 1638266660977
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -8797,7 +8805,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("71cbecbd1bae1323a2e0")
+/******/ 		__webpack_require__.h = () => ("7d4d453aca2c908d6bd5")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

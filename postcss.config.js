@@ -12,12 +12,12 @@ module.exports = {
 			keyframes: true,
 			variables: true,
 			rejected: true,
-			safelist: [/^is-/, /active$/, /.map$/, /^[class]/, /show/, /team/]
+			safelist: [/^is/, /active$/, /fixed$/, /.map$/, /^[class]/, /show/, /team/]
 		}),
-		uncss({
-			html: ['./dist/*.html'],
-			ignore: [/^is-/, /active$/, /show/, /team/]
-		}),
+		// uncss({
+		// 	html: ['./dist/*.html'],
+		// 	ignore: [/^is/, /active$/, /fixed$/, /.map$/, /^[class]/, /show/, /team/]
+		// }),
 		combineMediaQuery,
 		combineDuplicatedSelectors({
 			removeDuplicatedProperties: true,

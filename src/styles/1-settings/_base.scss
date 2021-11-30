@@ -19,7 +19,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	overflow-anchor: none;
 	overflow-x: hidden;
-	&.is-unscrollabble {
+	&.is-fixed {
 		overflow: hidden;
 		position: fixed;
 		width: 100%;
